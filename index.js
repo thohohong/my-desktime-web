@@ -7,8 +7,8 @@ var Reader = (event) => {
         for (var i = 0; i < lines.length; i++){
             var line = lines[i].split(" ");
             var date_ = line[0];
-            var studyTime = parseInt(line[1]);
-            var goalTime = parseInt(line[2]);
+            var goalTime = parseInt(line[1]);
+            var studyTime = parseInt(line[2]);
 
 
             createBox(date_, studyTime, goalTime);
