@@ -6,12 +6,13 @@ var Reader = (event) => {
         var lines = reader.result.split("\n");
         for (var i = 0; i < lines.length; i++){
             var line = lines[i].split(" ");
-            var date_ = line[0];
-            var goalTime = parseInt(line[1]);
-            var studyTime = parseInt(line[2]);
+            if (line.length > 2){
+                var date_ = line[0];
+                var goalTime = parseInt(line[1]);
+                var studyTime = parseInt(line[2]);
+                createBox(date_, studyTime, goalTime);
+            }
 
-
-            createBox(date_, studyTime, goalTime);
         }
     };
     reader.readAsText(data.files[0]);
